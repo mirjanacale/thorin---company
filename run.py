@@ -17,7 +17,14 @@ def about():
 
 @app.route("/contact")
 def contact():
-    return render_template("contact.html")#
+    """
+    Route to the contact page
+    
+    Returns:
+        The rendered contact.html template
+    """
+    return render_template("contact.html")
+    return render_template("contact.html")
 
 
 @app.route("/careers")
