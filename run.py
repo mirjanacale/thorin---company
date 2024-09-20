@@ -7,29 +7,28 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-     return render_template("index.html")
- 
- 
+    """
+    The home page of the website.
+
+    Returns:
+        Response: The rendered HTML template for the index page.
+    """
+    return render_template("index.html")
+
+
 @app.route("/about")
 def about():
-    return render_template("about.html")
+    return render_template("about.html", page_title="About", list_of_numbers=[1, 2, 3])
 
 
 @app.route("/contact")
 def contact():
-    """
-    Route to the contact page
-    
-    Returns:
-        The rendered contact.html template
-    """
-    return render_template("contact.html")
-    return render_template("contact.html")
+    return render_template("contact.html", page_title="Contact")
 
 
 @app.route("/careers")
 def careers():
-    return render_template("careers.html")
+    return render_template("careers.html", page_title="Careers")
 
 
 if __name__ == "__main__":
